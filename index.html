@@ -8,6 +8,15 @@
   
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
+  <!-- Google Fonts: -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles and Script: -->
+  <link rel="stylesheet" href="dist/style.css">
+  <script defer src="dist/script.js"></script>
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -16,17 +25,42 @@
 </head>
 <body>
 
-  We're coming soon
+  <header class="container">
+    <div class="header">
+      <img src="images/logo.svg" alt="Logo" width="100" height="40">
+    </div>
+  </header>
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+  <main class="container">
+    <div class="main">
+      <div class="main__image">
+        <img src="images/hero-mobile.jpg" alt="Girl">
+      </div>
 
-  Email Address
-  
+      <div class="main__heading">
+       <h1>
+         <div class="first">We're</div>
+         <div class="second">coming<br>soon</div>
+        </h1>
+      </div>
+
+      <div class="main__para">
+        <p>Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      </div>
+      <div class="main__email">
+        <form>
+          <input type="email" name="email" id="email" placeholder="Email Address" size="30">
+          <button type="submit"><img src="images/icon-arrow.svg" id="arrow" alt="arrow"></button>
+        </form>
+      </div>
+    </div>
+  </main>
+
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Djordje Rajc</a>.
     </p>
   </footer>
 </body>

@@ -1,0 +1,106 @@
+@use "../util" as *;
+
+.header {
+    padding-top: rem(10);
+    padding-left: rem(10);
+
+    img {
+        max-width: 100%;
+        padding: rem(10);
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &__image {
+        padding: rem(10) 0 rem(10) 0;
+        margin: rem(10) 0 rem(10) 0;
+
+       
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+
+        .first {
+            font-weight: 300;
+            font-size: rem(45);
+            text-transform: uppercase;
+            color: var(--desaturatedRed);
+        }
+
+        .second {
+            text-align: center;
+            text-transform: uppercase;
+            color: var(--darkGrayishRed);
+        }
+    }
+
+    &__para {
+        text-align: center;
+        padding: rem(10) rem(20) rem(15) rem(20);
+        
+    }
+
+    &__email{
+        float: right;
+        
+        
+        form {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid var(--desaturatedRed);
+            border-radius: rem(25);
+            
+            
+        
+        input[type=email] {
+            border: none;
+            flex-grow: 2;
+            background: none;
+            padding: rem(10);
+            font-size: rem(16);
+
+            &::placeholder {
+                color: var(--desaturatedRed);
+                opacity: 0.8;
+                padding: rem(10);
+                font-size: rem(15);
+            }
+        }
+
+        button {
+            background: linear-gradient(135deg, var(--linearGradient-1) 0%, var(--linearGradient-2) 0%, var(--linearGradient-3) 15%, var(--linearGradient-4) 35%);
+            font-size: rem(17);
+            border: none;
+            width: rem(70);
+            height: rem(48);
+            border-radius: rem(25);
+            cursor: pointer;
+            padding: rem(10);
+            margin: rem(-1);
+
+            .arrow {
+                    
+            }
+        }
+
+    }
+    }
+
+
+
+}
+
+footer {
+    padding-top: 15px;
+}

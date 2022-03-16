@@ -1,0 +1,12 @@
+@use "../util" as *;
+
+h1 {
+    font-weight: 600;
+    font-size: rem(42);
+}
+
+p {
+    font-size: rem(16);
+    font-weight: 300;
+    color: var(--desaturatedRed);
+}
