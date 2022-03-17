@@ -19,24 +19,29 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution { font-size: 11px !important; text-align: left;  padding-top: 20px;}
+    .attribution a { color: hsl(228, 45%, 44%) !important;}
   </style>
 </head>
 <body>
 
-  <header class="container">
-    <div class="header">
-      <img src="images/logo.svg" alt="Logo" width="100" height="40">
-    </div>
-  </header>
-
-  <main class="container">
+  <main>
     <div class="main">
+
+      <div class="main__header">
+        <img src="images/logo.svg" alt="Logo" width="100" height="40">
+      </div>
+     
+
       <div class="main__image">
-        <img src="images/hero-mobile.jpg" alt="Girl">
+        <picture>
+          <source media="(min-width: 1140px)" srcset="images/hero-desktop.jpg">
+          <source media="(min-width: 375px)" srcset="images/hero-mobile.jpg">
+          <img src="images/hero-mobile.jpg" alt="Girl">
+        </picture>
       </div>
 
+      <div class="main__left">
       <div class="main__heading">
        <h1>
          <div class="first">We're</div>
@@ -48,20 +53,32 @@
         <p>Hello fellow shoppers! We're currently building our new fashion store. 
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
       </div>
-      <div class="main__email">
-        <form>
-          <input type="email" name="email" id="email" placeholder="Email Address" size="30">
-          <button type="submit"><img src="images/icon-arrow.svg" id="arrow" alt="arrow"></button>
-        </form>
-      </div>
-    </div>
-  </main>
 
-  <footer>
-    <p class="attribution">
+      <div class="main__email">
+        <form action="#" id="form">
+          <input type="email" name="email" id="email" placeholder="Email Address">
+          
+          <img src="images/icon-error.svg" alt="error" srcset="" id="icon-error" width="30" height="30">
+
+          <button type="submit" id="submit"><img src="images/icon-arrow.svg" id="arrow" alt="arrow" srcset=""></button>
+        </form>
+        <p id="text-error"></p>
+      </div>
+
+    </div>
+
+    <p class="main__attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Djordje Rajc</a>.
     </p>
-  </footer>
+
+    </div>
+
+    
+    
+  </main>
+  
+  
+  
 </body>
 </html>

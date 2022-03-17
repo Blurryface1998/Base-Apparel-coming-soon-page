@@ -1,12 +1,22 @@
 @use "../util" as *;
+@forward "boilerplate";
 
 h1 {
     font-weight: 600;
     font-size: rem(42);
+
+    @include breakpoint(large) {
+        font-size: rem(50);
+    }
+
 }
 
 p {
     font-size: rem(16);
     font-weight: 300;
     color: var(--desaturatedRed);
+
+    @include breakpoint(large) {
+        font-size: rem(18);
+    }
 }
