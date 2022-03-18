@@ -2,13 +2,22 @@
 @forward "boilerplate";
 
 h1 {
-    font-weight: 600;
+    font-weight: 300;
     font-size: rem(42);
 
     @include breakpoint(large) {
         font-size: rem(50);
     }
 
+}
+
+h2 {
+    font-weight: 600;
+    font-size: rem(42);
+
+    @include breakpoint(large) {
+        font-size: rem(50);
+    }
 }
 
 p {

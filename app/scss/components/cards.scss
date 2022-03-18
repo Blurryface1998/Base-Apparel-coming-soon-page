@@ -70,12 +70,13 @@
     &__heading {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         align-items: center;
         text-align: center;
         flex-wrap: wrap;
 
         @include breakpoint(large) {
-            text-align: left;
+            align-items: baseline;
             padding: rem(20);
             
         }
@@ -88,7 +89,8 @@
             color: var(--desaturatedRed);
 
             @include breakpoint(large) {
-                font-size: rem(50);
+                text-align: left;
+
             }
         }
 
