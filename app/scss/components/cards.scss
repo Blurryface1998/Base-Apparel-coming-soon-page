@@ -1,11 +1,7 @@
 @use "../util" as *;
 
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+    
 
     @include breakpoint(large) {
         display: grid;
@@ -17,25 +13,23 @@
     }
 
     &__header {
-        padding-top: rem(12);
-        padding-left: rem(10);
-        
+        margin: rem(25) 0 rem(20) rem(25);
 
         img {
             max-width: 100%;
-            padding: rem(10);
             height: auto;
+
         }
 
         
 
         @include breakpoint(large) {
             grid-area: one;
-            margin-left: rem(120);
-            margin-top: rem(20);
+            margin: rem(40) 0 rem(60) rem(125);
+            
             img {
-                width: rem(140);
-                height: rem(50);
+                width: 160px;
+                height: 40px;
             }
         }
     }
@@ -44,6 +38,8 @@
     &__image {
         padding: rem(5) 0 rem(10) 0;
         margin: rem(10) 0 rem(10) 0;
+        font-size: 0;
+
         img {
             max-width: 100%;
             height: auto;
@@ -51,16 +47,13 @@
 
         @include breakpoint(large) {
             grid-area: img;
+            padding: 0;
+            margin: 0;
         }
     }
 
     &__left {
         @include breakpoint(large) {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: flex-start;
-            flex-wrap: wrap;
             padding: rem(20);
             margin-left: rem(100);
             grid-area: two;
@@ -68,17 +61,11 @@
     }
 
     &__heading {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
         text-align: center;
-        flex-wrap: wrap;
+        letter-spacing: rem(10);
 
         @include breakpoint(large) {
-            align-items: baseline;
-            padding: rem(20);
-            
+            text-align: start;
         }
 
 
@@ -89,7 +76,7 @@
             color: var(--desaturatedRed);
 
             @include breakpoint(large) {
-                text-align: left;
+                text-align: start;
 
             }
         }
@@ -100,8 +87,8 @@
             color: var(--darkGrayishRed);
 
             @include breakpoint(large) {
-                text-align: left;
-                padding-bottom: rem(20);
+                text-align: start;
+                padding-bottom: rem(25);
             }
         }
     }
@@ -109,19 +96,24 @@
     &__para {
         text-align: center;
         padding: rem(10) rem(20) rem(15) rem(20);
+       
+        p {
+            font-weight: 400;
+            line-height: 1.6;
+        }
         
         @include breakpoint(large) {
-            margin-right: rem(100);
             text-align: left;
-            padding-right: rem(100);
-            
+            margin-right: rem(202);
+            padding: 0 rem(100) 0 0;
+            width: 60ch;
         }
     }
 
     &__email{
         
         @include breakpoint(large) {
-            padding: rem(20);
+            margin-top: rem(100);
         }
 
         form {
@@ -130,10 +122,12 @@
         border: 1px solid var(--desaturatedRed);
         border-radius: rem(25);
         margin: rem(10);
+        transition: border 0.2s ease;
         
 
         @include breakpoint(large) {
             width: rem(435);
+            margin: 0 0 0 rem(-5);
         }
         
         input[type=email] {
@@ -159,6 +153,8 @@
            margin-top: rem(7);
            margin-right: rem(10);
            display: none;
+           transition: display 0.3s ease-in;
+
 
             img {
                 max-width: 100%;
@@ -174,7 +170,9 @@
             border-radius: rem(25);
             cursor: pointer;
             padding: rem(10);
-            margin: rem(-1);
+            margin: rem(-2);
+            box-shadow: 0px 8px 8px 1px var(--linearGradient-3);
+            transition: all 0.3s ease-in;
 
             @include breakpoint(large) {
                 width: rem(90);
@@ -183,8 +181,7 @@
 
             &:hover {
                 background: linear-gradient(135deg, var(--linearGradient-1) 0%, var(--linearGradient-2) 0%, var(--linearGradient-3) 20%, var(--linearGradient-4) 100%);
-                box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.57);
-                transition: 0.1s ease;
+                box-shadow: 0px 11px 11px 4px var(--linearGradient-3);
             }
         }
 
@@ -193,16 +190,12 @@
     }
 
     #text-error {
+        display: none;
         color: var(--softRed);
         margin: rem(15);
+        transition: display 0.3s ease-in;
+        transition: color 0.2s ease-in-out;
       }
     }
-
-    &__attribution {
-        grid-area: tre;
-        padding: rem(20);
-        font-size: rem(16);
-    }
-
 }
 
